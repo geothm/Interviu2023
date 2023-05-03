@@ -1,6 +1,5 @@
 package ro.irian.exercise;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public class Student {
@@ -13,18 +12,12 @@ public class Student {
 
     private String specialty;
 
-    private LocalDate enrolledInSoftwareDesignFrom;
-
-    private LocalDate enrolledInComputerEngineeringFrom;
-
-    public Student(String id, String name, int year, List<String> classes, String specialty, LocalDate enrolledInSoftwareDesignFrom, LocalDate enrolledInComputerEngineeringFrom) {
+    public Student(String id, String name, int year, List<String> classes, String specialty) {
         this.id = id;
         this.name = name;
         this.year = year;
         this.classes = classes;
         this.specialty = specialty;
-        this.enrolledInSoftwareDesignFrom = enrolledInSoftwareDesignFrom;
-        this.enrolledInComputerEngineeringFrom = enrolledInComputerEngineeringFrom;
     }
 
     public void setId(String id) {
@@ -47,14 +40,6 @@ public class Student {
         this.specialty = specialty;
     }
 
-    public void setEnrolledInSoftwareDesignFrom(LocalDate enrolledInSoftwareDesignFrom) {
-        this.enrolledInSoftwareDesignFrom = enrolledInSoftwareDesignFrom;
-    }
-
-    public void setEnrolledInComputerEngineeringFrom(LocalDate enrolledInComputerEngineeringFrom) {
-        this.enrolledInComputerEngineeringFrom = enrolledInComputerEngineeringFrom;
-    }
-
     public String getId() {
         return id;
     }
@@ -73,13 +58,5 @@ public class Student {
 
     public String getSpecialty() {
         return specialty;
-    }
-
-    public LocalDate getEnrolledInSoftwareDesignFrom() {
-        return enrolledInSoftwareDesignFrom;
-    }
-
-    public LocalDate getEnrolledInComputerEngineeringFrom() {
-        return enrolledInComputerEngineeringFrom;
     }
 }

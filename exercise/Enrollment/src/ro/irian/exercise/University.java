@@ -12,8 +12,8 @@ public class University {
 
     public University() {
         students = new ArrayList<>();
-        Student george = new Student("001", "George", 1, new ArrayList<>(), "CTI", null, null);
-        Student andrei = new Student("002", "Andrei", 2, new ArrayList<>(), "TI", null, null);
+        Student george = new Student("001", "George", 1, new ArrayList<>(), "CTI");
+        Student andrei = new Student("002", "Andrei", 2, new ArrayList<>(), "TI");
 
         students.add(george);
         students.add(andrei);
@@ -93,14 +93,12 @@ public class University {
                     if (uniClass.equals("SOFTWARE_DESIGN")) {
                         if (student.getSpecialty().equals("CTI")) {
                             student.getClasses().add(uniClass);
-                            student.setEnrolledInSoftwareDesignFrom(LocalDate.now());
                         }
                     }
                     else {
                         if (uniClass.equals("COMPUTER_SCIENCE")) {
                             if (student.getSpecialty().equals("TI")) {
                                 student.getClasses().add(uniClass);
-                                student.setEnrolledInComputerEngineeringFrom(LocalDate.now());
                             }
                         }
                         else {
@@ -113,8 +111,6 @@ public class University {
         }
         if (!ok) {
             List<String> classes = new ArrayList<>();
-            LocalDate enrolledInSoftwareDesignFrom = null;
-            LocalDate enrolledInComputerEngineeringFrom = null;
 
             for (MinYearRequirement minYearRequirement:minYearRequirements) {
                 if (minYearRequirement.getUniClass().equals(uniClass)) {
@@ -127,23 +123,21 @@ public class University {
             if (uniClass.equals("SOFTWARE_DESIGN")) {
                 if (studentSpecialty.equals("CTI")) {
                     classes.add(uniClass);
-                    enrolledInSoftwareDesignFrom = LocalDate.now();
                 }
             }
             else {
                 if (uniClass.equals("COMPUTER_SCIENCE")) {
                     if (studentSpecialty.equals("TI")) {
                         classes.add(uniClass);
-                        enrolledInComputerEngineeringFrom = LocalDate.now();
                     }
                 }
                 else {
                     classes.add(uniClass);
                 }
             }
-            Student newStudent = new Student(id, name, year, classes, studentSpecialty, enrolledInSoftwareDesignFrom, enrolledInComputerEngineeringFrom);;
+            Student newStudent = new Student(id, name, year, classes, studentSpecialty);;
             students.add(newStudent);
-            return new Student(id, name, year, classes, studentSpecialty, enrolledInSoftwareDesignFrom, enrolledInComputerEngineeringFrom);
+            return new Student(id, name, year, classes, studentSpecialty);
         }
         return null;
     }
@@ -172,5 +166,10 @@ public class University {
         }
 
         return result;
+    }
+
+    public List<Student> getAllStudentsAlphabetically(){
+        //TODO
+        return new ArrayList<>();
     }
 }

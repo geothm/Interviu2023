@@ -15,7 +15,12 @@ public class Main {
 
         System.out.println("Students in year 1:");
         university.getStudentsByYear(1)
-                        .forEach(student -> System.out.println(student.getName()));;
+                        .forEach(student -> System.out.println(student.getName()));
+
+        //TODO
+        //System.out.println("All Students alphabetically:");
+        //university.getAllStudentsAlphabetically()
+        //        .forEach(student -> System.out.println(student.getName()));;
     }
 
     public static void shouldPrint(University university) {
