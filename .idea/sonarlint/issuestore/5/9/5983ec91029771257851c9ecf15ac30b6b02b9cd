@@ -1,0 +1,16 @@
+
+[	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(Ä‹áÔ
+`	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(‘Ÿ¾°ÿÿÿÿÿ
+`	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(‘Ÿ¾°ÿÿÿÿÿ
+J
+java:S1066E"/Merge this if statement with the enclosing one.(·Ã‚ûÿÿÿÿ
+J
+java:S1066u"/Merge this if statement with the enclosing one.(Ê¿£Ñüÿÿÿÿ
+i
+java:S3776,"SRefactor this method to reduce its Cognitive Complexity from 111 to the 15 allowed.(¯Ñ»€
+K
+java:S1854B"6Remove this useless assignment to local variable "ok".(ŸÚÁw
+8
+java:S1116Š"Remove this empty statement.(×Øñıÿÿÿÿ
+P
+java:S1135¬"2Complete the task associated to this TODO comment.(…ïœ†8î¾Æş0
